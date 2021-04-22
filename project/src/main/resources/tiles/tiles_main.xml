@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+	<definition name="baseLayout"
+					template="/WEB-INF/views/common/layout.jsp">
+		<put-attribute name="title"		value="" />
+		<put-attribute name="header" 	value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="side" 		value="/WEB-INF/views/common/side.jsp" />
+		<put-attribute name="body"		value="" />
+		<put-attribute name="footer" 	value="/WEB-INF/views/common/footer.jsp" />
+		<put-attribute name="quickMenu" value="/WEB-INF/views/common/quickMenu.jsp" />
+	</definition>
+
+	<definition name="/main/main" extends="baseLayout">
+		<put-attribute name="title"	value="쇼핑몰 메인페이지" />
+		<put-attribute name="body" value="/WEB-INF/views/main/main.jsp" />
+	</definition>
+	
+	<!-- 회원목록요청시 보여지게 되는 layout -->
+ 	<definition name="member/memberList"  extends="baseLayout">
+		<put-attribute name="title" value="회원목록" />
+		<put-attribute name="body"  value="/WEB-INF/views/member/memberList.jsp" />
+	</definition>
+	
+	<!-- 회원가입 폼보여주는 layout -->
+	<definition name="member/joinForm"  extends="baseLayout">
+		<put-attribute name="title" value="회원가입폼" />
+		<put-attribute name="body"  value="/WEB-INF/views/member/joinForm.jsp" />
+	</definition>
+
+	
+	<!-- 로그인 폼보여주는 layout  -->
+	<definition name="member/loginForm"  extends="baseLayout">
+		<put-attribute name="title" value="로그인화면" />
+		<put-attribute name="body"  value="/WEB-INF/views/member/loginForm.jsp" />
+	</definition>
+	
+	<!-- 메인화면 보여주는 layout  -->
+	<definition name="main/main"  extends="baseLayout">
+		<put-attribute name="title" value="메인화면" />
+		<put-attribute name="body"  value="/WEB-INF/views/main/main.jsp" />
+	</definition>
+	
+	<!-- qnaList 보여주는 layout  -->
+	<definition name="qna/qnaList"  extends="baseLayout">
+		<put-attribute name="title" value="상품 문의" />
+		<put-attribute name="body"  value="/WEB-INF/views/qna/qnaList.jsp" />
+	</definition>
+	
+	<!-- qnaWirteForm 보여주는 layout 
+	<definition name="qna/writeQnaForm"  extends="baseLayout">
+		<put-attribute name="title" value="문의 작성" />
+		<put-attribute name="body"  value="/WEB-INF/views/qna/wirteQna.jsp" />
+	</definition> -->
+	
+	<!-- modifyQnaForm 보여주는 layout  -->
+	<definition name="qna/modifyQnaForm"  extends="baseLayout">
+		<put-attribute name="title" value="문의 수정" />
+		<put-attribute name="body"  value="/WEB-INF/views/qna/modifyQna.jsp" />
+	</definition>
+	
+	<!-- wirteCommentForm 보여주는 layout  -->
+	<definition name="qna/wirteCommentForm"  extends="baseLayout">
+		<put-attribute name="title" value="답글 작성" />
+		<put-attribute name="body"  value="/WEB-INF/views/qna/wirteComment.jsp" />
+	</definition>
+	
+	<!-- modifyCommentForm 보여주는 layout  -->
+	<definition name="qna/modifyCommentForm"  extends="baseLayout">
+		<put-attribute name="title" value="답글 수정" />
+		<put-attribute name="body"  value="/WEB-INF/views/qna/modifyComment.jsp" />
+	</definition>
+	
+</tiles-definitions>
